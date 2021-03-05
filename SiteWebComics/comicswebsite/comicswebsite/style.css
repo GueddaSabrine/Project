@@ -1,0 +1,98 @@
+@font-face
+{
+    font-family: 'Sometime';
+    src:url("futura/Futura\ Heavy\ font.ttf") format("truetype")
+}
+
+h1
+{
+    font-family: 'Sometime';
+}
+
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+}
+
+
+@media (max-width: 600px) {
+    #img1 {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #img2 {
+      display: block;
+    }
+  }
+
+  @media (min-width: 600px) {
+    #img1 {
+      display: block;
+    }
+  }
+
+  @media (min-width: 600px) {
+    #img2 {
+      display: none;
+    }
+  }
+
+.colorchange:hover{
+color:yellow; 
+}
+.colorchangered:hover{
+color:red; 
+}        
+.colorchangeblue:hover{
+color:blue; 
+}        
+.colorchangepink:hover{
+color:rgb(218, 67, 205); 
+}       
+.colorchangelightblue:hover{
+color:rgb(79, 249, 255); 
+}
+.adress
+{
+    text-decoration: none;
+}
+/*animation logo*/
+.anim {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: mymove 2s;
+    animation-timing-function:linear;
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 120px;}
+}
+
+.link
+{
+    color:white;
+    text-decoration: none;
+}
+
+.navbar-brand img
+{
+    filter: invert(100%);
+}
+
+caption
+{
+    caption-side: top;
+    font-size: x-large;
+}
+.buttonnav
+{
+    float:right;
+}
+
+header{
+    background-image:url(bg-header.jpg) ;
+}

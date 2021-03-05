@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ComicsTeam</title>
+  </head>
+<body class="bg-dark">
+  <!--logo-connexion-inscription-->
+  <header class="header">
+    <nav class="navbar navbar-dark  text-light">
+      <div class="container-fluid">
+        <a href="error404.html" target="_blank" class="navbar-brand anim"><img class="ms-4 mb-2" src="logoSITE.png" alt="logo" width="150" height="95"></a>
+        <a class="adress d-none d-md-block text-white">Adresse : Les Docks, 143 Rue Yves le Coz, 78000 Versailles</a>
+        <a type="button" class="btn btn-secondary d-none d-md-block float-end" data-bs-toggle="modal"
+          data-bs-target="#modal"><i class="fas fa-sign-in-alt"></i> Connexion/Inscription</a>
+        <a type="button" class="btn btn-warning d-block d-md-none" data-bs-toggle="modal" data-bs-target="#modal"><i
+            class="fas fa-sign-in-alt"></i></a>
+      </div>
+      <div class="modal text-dark" tabindex="-1" id='modal' data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="modal-title text-dark fw-bold">Connexion/Inscription</p>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Entrez-votre adresse email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input">
+                  <label class="form-check-label">Acceptez notre politique de confidentialité</label>
+                </div>
+                <button type="submit" class="btn btn-primary ms-3">Valider</button>
+                <button type="submit" class="btn btn-success float-end">Créer un compte</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close btn btn-secondary" data-bs-dismiss="modal">X Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+      <div class="container-fluid">
+        <a class="navbar-brand d-block d-md-none" href="index.html">Accueil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle gx-5" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Nouveautés</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle me-10" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Editeur</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Classique</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Contact</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control" type="search" placeholder="Rechercher" aria-label="Search">
+            <button class="btn btn-secondary" type="submit"><i class="fab fa-searchengin"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--carousel-->
+  <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+        <img src="c1.jpg" id="img1" class="w-100" alt="...">
+        <img src="c6test.jpg" id="img2" class="w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2><span class="badge bg-dark">La nouvelle collection DC viens de sortir !</span></h2>
+          <button type="button" class="btn btn-danger border-3">Decouvrir les comics</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="c2.jpg" id="img1" class=" w-100" alt="...">
+        <img src="c7.jpg" id="img2" class=" w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2><span class="badge bg-dark">La suicide squad a enfin droit à sa collection</span></h2>
+          <button type="button" class="btn btn-danger border-3">Decouvrir le coté obscur</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="c3.png" id="img1" class="w-100" alt="...">
+        <img src="c5test.jpg" id="img2" class=" w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2><span class="badge bg-dark">De nouveaux comics en enchere !</span></h2>
+          <button type="button" class="btn btn-danger border-3">Decouvrir le catalogue</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+      data-bs-slide="next">
+
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Card title-->
+  <div class="container-fluid mt-1 border-5 text-light mb-3">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h1 class="mt-2">Qui sommes-nous ?</h1>
+        <p>Bienvenue sur votre librairie Versaillaise située au 143 Rue Yves le Coz spécialisée en BD Américaines avec
+          un grand choix de comics en français. Nos expéditions sont soignées et nos envois sont rapides. Vous
+          retrouverez dans les rayons de notre boutique tous vos personnages favoris : Wonder Woman, Spider-Man, Iron
+          Man, Batman, Deadpool, Superman, Avengers, X-Men... mais aussi les éditeurs que vous aimez : Marvel, DC
+          Comics, Image, Panini Comics France, Delcourt, Urban Comics, Valiant, Bliss Comics, Glénat, Akileos, Label
+          619, Neofelis...Excalibur Comics, c'est votre spécialiste en la matière !</p>
+        <img src="sicepic.jpg" class="img-fluid rounded-pill d-none d-md-block" alt="Sabrinne la superhéroine" />
+        <img src="sicepicmini.jpg" class="img-fluid d-md-none d-block" alt="Sabrinne la superhéroine" />
+        <table class="table table-dark table-striped">
+          <caption class="text-center text-white text-decoration-underline fw-bold">Horaires d'ouverture :</caption>
+          <thead>
+            <tr>
+              <th>Jour</th>
+              <th>Matin</th>
+              <th>Après-midi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Lundi</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+            <tr>
+              <th>Mardi</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+            <tr>
+              <th>Mercredi</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+            <tr>
+              <th>Jeudi</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+            <tr>
+              <th>Vendredi</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+            <tr>
+              <th>Samedi</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+            <tr>
+              <th>Dimanche</th>
+              <td>9h-12h30</td>
+              <td>13h-17h30</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1 class="d-none d-md-block">Nos figurines</h1>
+        <div class="row row-cols-2 g-4">
+          <div class="col-6">
+            <div class="card bg-dark border-primary d-none d-md-block">
+              <img src="Figurine/f1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Flash</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card bg-dark border-danger d-none d-md-block">
+              <img src="Figurine/f2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Joker</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card bg-dark border-warning d-none d-md-block">
+              <img src="Figurine/f3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Wonderwoman</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card bg-dark border-success d-none d-md-block">
+              <img src="Figurine/f9.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Harley Quinn</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card bg-dark border-info d-none d-md-block">
+              <img src="Figurine/f10.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Batwoman</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card bg-dark border-secondary d-none d-md-block">
+              <img src="Figurine/f11.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Deadpool</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card my-3 bg-dark">
+          <h1 class="d-block d-md-none">Nos figurines</h1>
+          <img src="Figurine/fl1.jpg" class="card-img-top" alt="...">
+          <div class="card-body>
+            <p class="card-title">DC comics</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h1>Nouveautés</h1>
+        <div class="row row-cols-2">
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="venom2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">VENOM</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="error404.html" target="_blank" type="button"
+                  class="btn btn-outline-danger border-2 fw-bold reg">Click & Collect <i class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="watchmen.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Watchman</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="spiderman.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Spider-man</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-block d-md-none">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="les-tresors-marvel-1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Wolverine</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1>Personnages</h1>
+        <div class="row row-cols-2">
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="cardtitle/ct4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">The-mask</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="error404.html" target="_blank" type="button"
+                  class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="cardtitle/ct5.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Bone Parish</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="cardtitle/ct6.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Superman Shazam</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-block d-md-none">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="venom.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Venom</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1>Comics</h1>
+        <div class="row row-cols-2">
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="deadpool-le-canard.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Ducky Deadpool</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="cardtitle/ct8.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Dawn of X</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="cardtitle/ct9.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Excalibur</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-block d-md-none">
+            <div class="card h-100 border-dark bg-dark text-light mb-3">
+              <img src="starwars.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title colorchange fs-1 fw-blod">Star Wars</p>
+                <p class="card-text colorchange">This is a longer card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.</p>
+                <a href="#" type="button" class="btn btn-outline-danger border-2  fw-bold">Click & Collect <i
+                    class="fa fa-store"> </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--carousel-->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="c6.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="c5.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Spiderman-affiche.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+  <!--footer-->
+  <footer class="text-center bg-dark text-light">
+    <a href="index.html"><i class="fas fa-chevron-up"></i></a><br>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <a href="error404.html" target="_blank" class="link" target="_blank"><span class="colorchangeblue"><i
+                class="fab fa-facebook fa-2x"></i><span class="d-none d-md-block">Rejoignez-nous sur
+                FACEBOOK</span></a></span>
+        </div>
+        <div class="col">
+          <a href="error404.html" target="_blank" class="link"><span class="colorchangered"><i
+                class="fab fa-pinterest fa-2x"></i><span class="d-none d-md-block">Rejoignez-nous sur
+                PINTEREST</span></span></a>
+        </div>
+        <div class="col">
+          <a href="error404.html" target="_blank" class="link"><span class="colorchangepink"><i
+                class="fab fa-instagram fa-2x"></i><span class="d-none d-md-block">Rejoignez-nous sur
+                INSTAGRAM</span></span></a>
+        </div>
+        <div class="col">
+          <a href="error404.html" target="_blank" class="link"><span class="colorchangelightblue"><i
+                class="fab fa-twitter fa-2x"></i><span class="d-none d-md-block">Rejoignez-nous sur
+                TWITTER</span></span></a>
+        </div>
+      </div>
+    </div>
+    <p class="colorchange mt-3">Librairie ComicsTeam</p>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,77 @@
+﻿@model List<AgendaCourtier.Models.Appointments>
+@{
+    ViewBag.Title = "AppointmentsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h2 class="titre">Liste de rendez-vous</h2>
+        </div>
+        <div class="col-sm">
+            <div class="imageliste">
+                <img src="~/Image/agenda.png" class="rounded mx-auto d-block" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover table-striped table-bordered border-white shadow-lg p-3 mb-5 bg-light rounded">
+    <tr class="head text-decoration-underline text-light text-center ">
+        <th>
+            Date et heure
+        </th>
+        <th>
+            Motif
+        </th>
+        <th>
+            Courtier
+        </th>
+        <th>
+            Client
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model.OrderBy(item => item.Brokers.lastname))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dateHour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brokers.lastname) @Html.DisplayFor(modelItem => item.Brokers.firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers.lastname)  @Html.DisplayFor(modelItem => item.Customers.firstname)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.idAppointment }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Supprimer", "Delete", new { id = item.idAppointment }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+</table>
+
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+    </script>
+    <script>
+        $(function () {
+            var ErrorMessage  = `@TempData["ErrorMessage"]`
+            if (ErrorMessage != ``)
+                alertify.error(ErrorMessage);
+             });
+    </script>
+}

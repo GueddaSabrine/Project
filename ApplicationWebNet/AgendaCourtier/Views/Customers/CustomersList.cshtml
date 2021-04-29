@@ -1,0 +1,119 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<AgendaCourtier.Models.Customers>
+@{
+    ViewBag.Title = "CustomersList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="titre">Liste des Clients</h2>
+
+<p>
+    @using (Html.BeginForm("CustomersList", "Customers", FormMethod.Get))
+    {
+        <b>Recherche : </b> <br />
+        @Html.RadioButton("searchBy", "lastname", true) <text>Nom</text>
+        @Html.RadioButton("searchBy", "firstname") <text>Prenom</text>
+        @Html.TextBox("search") <input type="submit" value="Rechercher"/>
+    }
+</p>
+
+<table class="table table-hover table-striped table-bordered border-white shadow-lg p-3 mb-5 bg-light rounded">
+    <tr class="head text-decoration-underline text-light text-center">
+        <th>
+            @Html.ActionLink("Nom", "CustomersList", new { sortBy = ViewBag.lastnameSortParameter, searchBy = Request.QueryString["searchBy"], search = Request["search"] }, new { @class="text-light"})
+        </th>
+        <th>
+            @Html.ActionLink("Prénom", "CustomersList", new { sortBy = ViewBag.firstnameSortParameter, searchBy = Request.QueryString["searchBy"], search = Request["search"] }, new { @class = "text-light" })
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            N°mobile
+        </th>
+        <th>
+            Budget
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="4">Aucune personne ne correspond à votre recherche</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.lastname
+                </td>
+                <td>
+                    @item.firstname
+                </td>
+                <td>
+                    @item.mail
+                </td>
+                <td>
+                    @item.phoneNumber
+                </td>
+                <td>
+                    @item.budget
+                </td>
+                <td>
+                    @Html.ActionLink("ProfilClient", "Details", new { id = item.idCustomer }, new { @class = "btn btn-success" })
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.idCustomer">Supprimer</button>
+
+
+                    @using (Html.BeginForm("Delete/" + item.idCustomer, "Customers", FormMethod.Post, null))
+
+
+                    {
+                        @Html.AntiForgeryToken()
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal-@item.idCustomer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Confirmation de supression</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Voulez-vous supprimer ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Fermer
+                                        </button>
+                                        <button type="submit" class="btn btn-danger">Confirmer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </td>
+            </tr>
+           
+            }
+        }
+    </table>
+
+@Html.PagedListPager(Model, page => Url.Action("CustomersList", new { page, searchBy = Request.QueryString["searchBy"], search = Request.QueryString["search"], sortBy = Request["sortBy"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true })
+
+@section scripts {
+    <script>
+        $(function () {
+            var successMessage = `@TempData["SuccessMessage"]`
+            if (successMessage != ``)
+                alertify.success(successMessage);
+        });
+    </script>
+}
+
+

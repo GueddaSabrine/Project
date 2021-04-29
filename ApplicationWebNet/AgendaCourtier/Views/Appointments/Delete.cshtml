@@ -1,0 +1,59 @@
+﻿@model AgendaCourtier.Models.Appointments
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PAGE SUPPRIMER</h2>
+
+<h3 class="titre">Êtes-vous sûr(e) de vouloir supprimer?</h3>
+<div>
+    <h4>Rendez-Vous - Client-Courtier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brokers.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brokers.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customers.lastname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-danger" />
+            @Html.ActionLink("Ne pas supprimer", "AppointmentsList")
+        </div>
+    }
+</div>
+

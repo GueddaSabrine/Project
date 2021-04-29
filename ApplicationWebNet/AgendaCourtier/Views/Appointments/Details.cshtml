@@ -1,0 +1,48 @@
+﻿@model AgendaCourtier.Models.Appointments
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h4 class="titre">Client Courtier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brokers.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brokers.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customers.lastname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "AppointmentsList")
+</p>

@@ -1,0 +1,82 @@
+﻿@model AgendaCourtier.Models.Appointments
+
+@{
+    ViewBag.Title = "Appointments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="titre">Ajout d'un Rendez-vous</h2>
+<p>Nous sommes le @DateTime.Now</p>
+<hr />
+@using (Html.BeginForm())
+{
+<div class="formulaire">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <a>Date et heure</a>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.dateHour, new { htmlAttributes = new { @id = "datetime" } })
+                        @Html.ValidationMessageFor(model => model.dateHour, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <a>Motif</a>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <a>Client</a>
+                    <div class="col-md-10">
+                        @Html.DropDownList("idCustomer", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.idCustomer, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <a>Courtier</a>
+                    <div class="col-md-10">
+                        @Html.DropDownList("idBroker", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.idBroker, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Enregistrer" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="imageform">
+                    <img src="~/Image/calendrier.jpg" height="300" width="350" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#datetime').datetimepicker($.datetimepicker.setLocale('fr'));
+    });
+</script>
+
+<script>
+    $(function () {
+        var ErrorMessage = `@TempData["ErrorMessage"]`
+        if (ErrorMessage != ``)
+            alertify.error(ErrorMessage);
+    });
+</script>
+

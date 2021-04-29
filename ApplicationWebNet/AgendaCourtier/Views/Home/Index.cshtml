@@ -1,0 +1,61 @@
+﻿@model List<AgendaCourtier.Models.Appointments>
+@{
+    ViewBag.Title = "Index";
+}
+<h1>Calendrier</h1>
+<h2 class="titre">Agenda Clients - Courtiers</h2>
+
+<h2>Liste des rendez-vous</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Date et heure
+        </th>
+        <th>
+            Motif
+        </th>
+        <th>
+            Courtier
+        </th>
+        <th>
+            Client
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateHour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brokers.lastname) @Html.DisplayFor(modelItem => item.Brokers.firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customers.lastname)  @Html.DisplayFor(modelItem => item.Customers.firstname)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.idAppointment }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.idAppointment }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
+
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+    </script>
+}

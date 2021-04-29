@@ -1,0 +1,60 @@
+﻿@model AgendaCourtier.Models.Brokers
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SUPPRIMER</h2>
+
+<h3 class="titre">Êtes-vous sûr(e) de vouloir supprimer?</h3>
+<div>
+    <h4>Brokers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phoneNumber)
+        </dd>
+    </dl>
+
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-actions btn btn-dark">
+            @Html.ActionLink("Supprimer d'abord tous les RDV avant de supprimer le courtier", "ABlist")
+        </div>
+        <br />
+        <div class="form-actions btn btn-light">
+            <input type="submit" value="Supprimer" class="btn btn-danger" />
+            @Html.ActionLink("Ne pas supprimer", "BrokersList")
+        </div>
+    }
+</div>

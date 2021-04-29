@@ -1,0 +1,49 @@
+﻿@model AgendaCourtier.Models.Brokers
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="titre">Info d'un Courtier</h2>
+
+<div>
+<h4>Courtier</h4>
+<hr />
+<dl class="formulaire">
+    <dt>
+        @Html.DisplayNameFor(model => model.lastname)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.lastname)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.firstname)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.firstname)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.mail)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.mail)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.phoneNumber)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.phoneNumber)
+    </dd>
+</dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.idBroker }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Retour à la iste", "BrokersList")
+</p>

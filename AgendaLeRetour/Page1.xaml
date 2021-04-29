@@ -1,0 +1,35 @@
+﻿<Page x:Class="AgendaLeRetour.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaLeRetour"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid Background="#FFC7BABD">
+        <TextBlock Text="AddCustomer/Ajouter un Client" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="118,40,260,377.6" Width="422" />
+        <Label Content="Nom" HorizontalAlignment="Left" Margin="32,101,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <TextBox x:Name="txtLastname" HorizontalAlignment="Left" Height="26" Margin="191,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+        <Label Content="Prénom" HorizontalAlignment="Left" Margin="32,145,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Height="26" Margin="191,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+        <Label Content="Mail" HorizontalAlignment="Left" Margin="32,188,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <TextBox x:Name="txtMail" HorizontalAlignment="Left" Height="26" Margin="191,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+        <Label Content="Numéro de Téléphone" HorizontalAlignment="Left" Margin="32,234,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="26" Margin="191,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+        <Label Content="Budget" HorizontalAlignment="Left" Margin="32,280,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <TextBox x:Name="txtBudget" HorizontalAlignment="Left" Height="26" Margin="191,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
+
+        <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="191,334,0,0" VerticalAlignment="Top" Width="113" Height="33" Click="Enregistrer_Click" Background="#FF00B653" FontWeight="Bold"/>
+        <Button Content="Annuler" IsCancel="True"  HorizontalAlignment="Left" Margin="316,334,0,0" VerticalAlignment="Top" Width="113" Height="33" Click="Annuler_Click" Background="Red" FontWeight="Bold"/>
+
+        <TextBlock Name="textErrorLastname" Visibility="Hidden" Margin="434,101,109,322.6" TextWrapping="Wrap" Text="Lastname" Foreground="Red"/>
+        <TextBlock Name="textErrorFirstname" Visibility="Hidden" Margin="434,145,109,278.6" TextWrapping="Wrap" Text="Firsname" Foreground="Red"/>
+        <TextBlock Name="textErrorMail" Visibility="Hidden" Margin="434,188,220,235.6" TextWrapping="Wrap" Text="Mail" Foreground="Red"/>
+        <TextBlock Name="textErrorPhoneNumber" Visibility="Hidden" Margin="434,234,133,188.6" TextWrapping="Wrap" Text="Phone" Foreground="Red"/>
+        <TextBlock Name="textErrorBudget" Visibility="Hidden" Margin="434,280,143,144.6" TextWrapping="Wrap" Text="Budget" Foreground="Red"/>
+        <TextBlock Name="textSuccessAdd" Visibility="Hidden" Text="Client enregistré avec succès" Margin="529,40,41,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF19B609" Height="61" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="20"/>
+
+    </Grid>
+</Page>

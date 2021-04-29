@@ -1,0 +1,15 @@
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\bin\Debug\MiniApplicationLeJustePrix.exe.config
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\bin\Debug\MiniApplicationLeJustePrix.exe
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\bin\Debug\MiniApplicationLeJustePrix.pdb
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.csprojAssemblyReference.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MainWindow.g.cs
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\App.g.cs
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix_MarkupCompile.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix_MarkupCompile.lref
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MainWindow.baml
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.g.resources
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.Properties.Resources.resources
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.csproj.GenerateResource.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.csproj.CoreCompileInputs.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.exe
+C:\Users\Sabrine\Desktop\DecouverteWPF\MiniApplicationLeJustePrix\obj\Debug\MiniApplicationLeJustePrix.pdb

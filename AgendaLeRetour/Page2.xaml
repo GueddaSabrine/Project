@@ -1,0 +1,15 @@
+﻿<Page x:Class="AgendaLeRetour.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaLeRetour"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2">
+
+    <Grid Background="PeachPuff">
+        <DataGrid x:Name="ListCustomers" HorizontalAlignment="Left" Height="179" VerticalAlignment="Top" Width="712" Margin="38,83,0,0" SelectionChanged="ListCustomers_SelectionChanged"/>
+        <Label Content="Liste Des Clients" HorizontalAlignment="Left" Margin="38,28,0,0" VerticalAlignment="Top" Width="211" FontSize="20" FontWeight="Bold"/>
+    </Grid>
+</Page>

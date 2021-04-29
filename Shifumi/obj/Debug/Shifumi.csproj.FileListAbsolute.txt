@@ -1,0 +1,15 @@
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\bin\Debug\Shifumi.exe.config
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\bin\Debug\Shifumi.exe
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\bin\Debug\Shifumi.pdb
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.csprojAssemblyReference.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\MainWindow.g.cs
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\App.g.cs
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi_MarkupCompile.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi_MarkupCompile.lref
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\MainWindow.baml
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.g.resources
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.Properties.Resources.resources
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.csproj.GenerateResource.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.csproj.CoreCompileInputs.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.exe
+C:\Users\Sabrine\Desktop\DecouverteWPF\Shifumi\obj\Debug\Shifumi.pdb

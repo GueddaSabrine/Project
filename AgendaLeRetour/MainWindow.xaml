@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgendaLeRetour"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="AgendaLeRetour.MainWindow"
+        mc:Ignorable="d"
+        Title="Agenda LaManu" Height="550" Width="800">
+    <Grid>
+        <StackPanel>
+            <Menu HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="794">
+                <MenuItem Header="Accueil" Click="Accueil_Click" Width="126" FontWeight="Bold"></MenuItem>
+                <MenuItem Header="Clients" Height="66" Width="137" Click="Client_Click" FontWeight="Bold" RenderTransformOrigin="0.52,0.518">
+                    <MenuItem Header="Ajouter un client" Click="Ajouter_Click" />
+                    <MenuItem Header="Liste des clients" Click="Liste_Click" />
+                </MenuItem>
+            </Menu>
+            <Frame x:Name="Naviguer" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
+    </Grid>
+</Window>

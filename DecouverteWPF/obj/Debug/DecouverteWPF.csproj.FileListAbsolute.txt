@@ -1,0 +1,15 @@
+C:\Users\Sabrine\Desktop\DecouverteWPF\bin\Debug\DecouverteWPF.exe.config
+C:\Users\Sabrine\Desktop\DecouverteWPF\bin\Debug\DecouverteWPF.exe
+C:\Users\Sabrine\Desktop\DecouverteWPF\bin\Debug\DecouverteWPF.pdb
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.csprojAssemblyReference.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\App.g.cs
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF_MarkupCompile.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF_MarkupCompile.lref
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\MainWindow.baml
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.g.resources
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.Properties.Resources.resources
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.csproj.GenerateResource.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.csproj.CoreCompileInputs.cache
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.exe
+C:\Users\Sabrine\Desktop\DecouverteWPF\obj\Debug\DecouverteWPF.pdb

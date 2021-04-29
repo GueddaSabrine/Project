@@ -1,0 +1,16 @@
+﻿<Window x:Class="MiniApplicationLeJustePrix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniApplicationLeJustePrix"
+        mc:Ignorable="d"
+        Title="Guess number" Height="450" Width="900">
+    <Grid Background="Orchid">
+        <Label Name="lblForm" Content="Guess" FontSize="40" Margin="228,117,392.6,236" FontWeight="Bold" Foreground="#FFF8F1FF"/>
+        <Label Name="lblTo" Content="Number" FontSize="40" Margin="501,117,98.6,235" Height="68" FontWeight="Bold" Foreground="White"/>
+        <Label Name="lblStatus" Content="Vies restantes : 10" Foreground="White" FontSize="24" Margin="448,243,10,110" Height="68" FontWeight="Bold"/>
+        <TextBox Name="txbInput" Text="?" FontSize="40" TextAlignment="Center" KeyDown="txbInput_KeyDown" Margin="283,33,315,320" Foreground="Orchid" FontWeight="Bold"></TextBox>
+        <Image Source="/guessNumber.png" Margin="0,228,380,0" />
+    </Grid>
+</Window>

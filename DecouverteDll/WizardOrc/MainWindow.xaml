@@ -1,0 +1,94 @@
+﻿<Window x:Class="WizardOrc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WizardOrc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="image.jpg" />
+        </Grid.Background>
+
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+
+        <Label  Grid.Row="0" Grid.Column="0" FontWeight="Bold" FontSize="24" FontFamily="Ravie" Foreground="#FFBD205D" HorizontalContentAlignment="Center">Orc</Label>
+
+        <Label Grid.Row="3" Grid.Column="1" FontWeight="Bold" FontSize="20" FontFamily="Ravie" Foreground="#FFCACCBF" HorizontalContentAlignment="Center">Nom</Label>
+        <TextBox x:Name="name" Grid.Row="3" Grid.Column="0" TextChanged="name_TextChanged" Background="{x:Null}" FontWeight="Bold" FontStyle="Italic" FontSize="14">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+        <Label Grid.Row="5" Grid.Column="1" FontWeight="Bold" FontSize="20" FontFamily="Ravie" Foreground="#FFCACCBF" HorizontalContentAlignment="Center">Santé</Label>
+        <TextBox x:Name="health"  Grid.Row="5" Grid.Column="0" TextChanged="health_TextChanged_1" Background="{x:Null}">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+        <Label Grid.Row="7" Grid.Column="1" FontWeight="Bold" FontSize="20" FontFamily="Ravie" Foreground="#FFCACCBF" HorizontalContentAlignment="Center">Message</Label>
+        <TextBox x:Name="message" Grid.Row="7" Grid.Column="0" TextChanged="message_TextChanged_2" Background="{x:Null}">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+        <Button Grid.Row="9" Grid.Column="0" FontWeight="Bold" FontSize="18" FontFamily="Ravie" Foreground="#FF45DACD" Content="Envoyer le message" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" />
+        <Button Grid.Row="10" Grid.Column="0" FontWeight="Bold" FontSize="18" FontFamily="Ravie" Foreground="#FF45DACD" Content="Coup" Click="Button_Click_1" Background="{x:Null}" BorderBrush="{x:Null}"   />
+
+
+        <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold" FontSize="24" FontFamily="Ravie" Foreground="#FF45DACD" HorizontalContentAlignment="Center" Background="{x:Null}">Witch</Label>
+        
+        <TextBox x:Name="nameW" Grid.Row="3" Grid.Column="2" TextChanged="name_TextChanged" Background="{x:Null}">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+
+        <TextBox x:Name="healthW"  Grid.Row="5" Grid.Column="2" TextChanged="health_TextChanged_1" Background="{x:Null}">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+
+        <TextBox x:Name="messageW" Grid.Row="7" Grid.Column="2" TextChanged="message_TextChanged_2" Background="{x:Null}">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+        <Button Grid.Row="9" Grid.Column="2" FontWeight="Bold" FontSize="18" FontFamily="Ravie" Foreground="#FFBD205D" Content="Envoyer le message" Click="Button2_Click" Background="{x:Null}" BorderBrush="{x:Null}" />
+        <Button Grid.Row="10" Grid.Column="2" FontWeight="Bold" FontSize="18" FontFamily="Ravie" Foreground="#FFBD205D" Content="Feu" Click="Button3_Click" Background="{x:Null}" BorderBrush="{x:Null}" />
+
+
+
+    </Grid>
+
+</Window>
